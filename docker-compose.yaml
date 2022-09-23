@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  jenkins:
+    build:
+      context: .
+      dockerfile: build/arm.Dockerfile
+    ports:
+      - 8090:8080
+    volumes:
+      - ./shared:/var/jenkins_home
+
